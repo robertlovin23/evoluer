@@ -78,7 +78,7 @@ const JobsPage = ({ user }) => {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
-          Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyb2JlcnQuYS5sb3ZpbkBnbWFpbC5jb20iLCJwZXJtaXNzaW9ucyI6InVzZXIifQ.tQ0oiS9ZjZM9O-fpYE3uDtynXMqCrEpWt0cFfIcjB_0", // Replace <api_key> with your actual API key
+          Authorization: `Bearer ${process.env.REACT_APP_JOBS_API_ACCESS_TOKEN}`, // Replace <api_key> with your actual API key
         },
         body: JSON.stringify({
           page: filters.page,
